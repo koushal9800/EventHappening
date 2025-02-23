@@ -1,7 +1,10 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 
+
 const OnboardingScreen = () => {
+    const navigation = useNavigation()
   return (
     <View style={{flex: 1}}>
       <View style={{flex: 4, justifyContent: 'center', alignItems: 'center'}}>
@@ -27,7 +30,7 @@ const OnboardingScreen = () => {
       </View>
       <View style={{flex: 4, alignItems: 'center'}}>
         <TouchableOpacity
-          onPress={() => console.log('Pressed')}
+          onPress={() => navigation.navigate('Login')}
           style={styles.buttonContainer}>
           <Text style={styles.buttonText}>Go To Prototype</Text>
         </TouchableOpacity>
@@ -67,6 +70,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Regular',
     fontSize: 16,
     color: '#fff',
+    lineHeight:22
   },
 });
 
