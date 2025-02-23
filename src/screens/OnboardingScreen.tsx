@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     height: 30,
     alignItems: 'center',
     justifyContent: 'center',
+    padding:4
   },
   buttonText: {
     fontFamily: 'Poppins-Regular',
