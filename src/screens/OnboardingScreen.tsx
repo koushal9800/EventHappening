@@ -1,10 +1,11 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import { AppProps } from '../navigation/Navigation';
 
 
-const OnboardingScreen = () => {
-    const navigation = useNavigation()
+const OnboardingScreen = ({navigation}:AppProps<'Onboarding'>) => {
+    // const navigation = useNavigation()
   return (
     <View style={{flex: 1}}>
       <View style={{flex: 4, justifyContent: 'center', alignItems: 'center'}}>

@@ -8,8 +8,9 @@ import {
   StyleSheet,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import { AppProps } from '../navigation/Navigation';
 
-const Login = () => {
+const Login = ({navigation}:AppProps<'Login'>) => {
   const [text, setText] = React.useState('');
   return (
     <View style={{flex: 1}}>
@@ -48,6 +49,7 @@ const Login = () => {
               />
 
               <TouchableOpacity
+              onPress={()=>navigation.navigate('Home')}
                 style={styles.loginButton}>
                 <Text
                   style={styles.loginButtonText}>
@@ -110,7 +112,7 @@ titleText:{
     width: '90%',
     height: '90%',
     backgroundColor: '#fff',
-    borderRadius: 4,
+    borderRadius: 12,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 1},
     shadowOpacity: 1,
